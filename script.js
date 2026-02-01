@@ -177,34 +177,43 @@ function clearError(input) {
     const errorMsg = input.parentElement.querySelector('.error-message');
     if (errorMsg) errorMsg.remove();
 }
+// Form submission to Formspree
+// IMPORTANT SETUP INSTRUCTIONS:
+// 1. Go to https://formspree.io/register and create a free account
+// 2. Create a new form and set the notification email to: FoxGrowthAgency@gmail.com
+// 3. Verify your email address (FoxGrowthAgency@gmail.com) when Formspree sends the verification link
+// 4. Copy your form endpoint (looks like: https://formspree.io/f/xnqevjdr)
+// 5. Replace 'YOUR_FORMSPREE_ID' below with your actual form ID
 
-// Form submission simulation
 async function submitForm(email) {
-    // In production, replace this with actual API call
-    // Example: 
-    // const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({ 
-    //         email: email, 
-    //         timestamp: new Date().toISOString(),
-    //         source: 'Fox Growth Agency Website'
-    //     })
-    // });
+    const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // Replace this with your actual Formspree form ID
     
-    // For now, simulate network delay
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            console.log('Form submitted:', {
-                email: email,
-                timestamp: new Date().toISOString(),
-                recipient: '[YOUR EMAIL HERE]'
-            });
-            resolve({ success: true });
-        }, 1500);
+    if (FORMSPREE_ID === 'YOUR_FORMSPREE_ID') {
+        console.error('Please configure your Formspree form ID in script.js. Sign up at https://formspree.io/');
+        throw new Error('Form not configured. Please set up Formspree to send emails to FoxGrowthAgency@gmail.com');
+    }
+    
+    const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({ 
+            email: email,
+            subject: 'New Contact Form Submission - Fox Growth Agency',
+            message: `New submission from website contact form.\n\nEmail: ${email}\nTimestamp: ${new Date().toISOString()}`,
+            timestamp: new Date().toISOString(),
+            source: 'Fox Growth Agency Website Contact Form'
+        })
     });
+    
+    if (!response.ok) {
+        throw new Error('Form submission failed');
+    }
+    
+    return response.json();
 }
-
 // Navbar scroll effect
 function initNavbarScroll() {
     const nav = document.querySelector('fox-navbar');
