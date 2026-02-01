@@ -1,19 +1,436 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>My static Space</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="card">
-			<h1>Welcome to your static Space!</h1>
-			<p>You can modify this app directly by editing <i>index.html</i> in the Files and versions tab.</p>
-			<p>
-				Also don't forget to check the
-				<a href="https://huggingface.co/docs/hub/spaces" target="_blank">Spaces documentation</a>.
-			</p>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fox Growth Agency | Turn Content Into Consistent Growth</title>
+    <meta name="description" content="We turn your existing content into consistent short-form growth. Professional content repurposing for creators, brands, and agencies.">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fox: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans antialiased text-slate-900 bg-white selection:bg-fox-100 selection:text-fox-900">
+
+    <!-- Navigation Component -->
+    <script src="components/navbar.js"></script>
+    <fox-navbar></fox-navbar>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+            <div class="absolute inset-0 -z-10">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-fox-50/50 to-white"></div>
+                <div class="absolute top-20 right-10 w-72 h-72 bg-fox-200/30 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-20 left-10 w-96 h-96 bg-orange-100/40 rounded-full blur-3xl"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-fox-50 border border-fox-100 text-fox-700 text-sm font-medium mb-8 animate-fade-in-up">
+                    <i data-feather="trending-up" class="w-4 h-4"></i>
+                    <span>Trusted by 50+ creators and brands</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6 leading-tight animate-fade-in-up delay-100">
+                    We turn your existing content into <span class="text-fox-600 relative inline-block">
+                        consistent short-form growth
+                        <svg class="absolute w-full h-3 -bottom-1 left-0 text-fox-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="8" fill="none" />
+                        </svg>
+                    </span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+                    For creators, brands, agencies, and local businesses who want to maximize their content's reach without spending hours editing.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-300">
+                    <a href="#workflow" class="group inline-flex items-center gap-2 px-8 py-4 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-slate-900/20">
+                        See How It Works
+                        <i data-feather="arrow-down" class="w-5 h-5 group-hover:translate-y-1 transition-transform"></i>
+                    </a>
+                    <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-full font-semibold hover:border-fox-300 hover:text-fox-600 transition-all duration-300">
+                        Get In Touch
+                    </a>
+                </div>
+
+                <div class="mt-16 pt-8 border-t border-slate-100 animate-fade-in-up delay-500">
+                    <p class="text-sm text-slate-500 mb-4">Trusted by teams at</p>
+                    <div class="flex flex-wrap justify-center items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                        <div class="h-8 w-24 bg-slate-300 rounded-md flex items-center justify-center text-xs font-bold text-slate-500">BRAND</div>
+                        <div class="h-8 w-24 bg-slate-300 rounded-md flex items-center justify-center text-xs font-bold text-slate-500">STARTUP</div>
+                        <div class="h-8 w-24 bg-slate-300 rounded-md flex items-center justify-center text-xs font-bold text-slate-500">AGENCY</div>
+                        <div class="h-8 w-24 bg-slate-300 rounded-md flex items-center justify-center text-xs font-bold text-slate-500">CREATOR</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. What We Actually Do -->
+        <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">What We Actually Do</h2>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">No fluff. Just a systematic approach to turning your long-form content into short-form assets that drive growth.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 group">
+                        <div class="w-12 h-12 bg-fox-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-feather="upload-cloud" class="w-6 h-6 text-fox-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">Content Intake</h3>
+                        <p class="text-slate-600 leading-relaxed">You send us long-form content or raw footage—or simply give us access to your existing library. We handle the rest.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 group">
+                        <div class="w-12 h-12 bg-fox-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-feather="scissors" class="w-6 h-6 text-fox-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">Repurpose & Optimize</h3>
+                        <p class="text-slate-600 leading-relaxed">We extract the best moments, craft compelling hooks, write captions, and format everything for maximum engagement across platforms.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300 group">
+                        <div class="w-12 h-12 bg-fox-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i data-feather="send" class="w-6 h-6 text-fox-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">Ready-to-Post Delivery</h3>
+                        <p class="text-slate-600 leading-relaxed">Receive polished, platform-optimized content delivered on schedule. Post immediately or we can help with scheduling.</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-white rounded-2xl p-8 border border-slate-200 flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <i data-feather="check-circle" class="w-5 h-5 text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-slate-900 mb-1">The Outcome</h4>
+                            <p class="text-slate-600">Consistent posting schedule, saved time, and measurable growth—without hiring a full-time editor.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 text-center">
+                        <div>
+                            <div class="text-2xl font-bold text-fox-600">10hrs+</div>
+                            <div class="text-sm text-slate-500">Saved Weekly</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold text-fox-600">3x</div>
+                            <div class="text-sm text-slate-500">Content Output</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Our Workflow -->
+        <section id="workflow" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Our Workflow</h2>
+                    <p class="text-lg text-slate-600">A structured, predictable process that just works.</p>
+                </div>
+
+                <div class="relative">
+                    <!-- Connecting Line -->
+                    <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-200 hidden md:block"></div>
+
+                    <div class="space-y-12">
+                        <!-- Step 1 -->
+                        <div class="relative flex flex-col md:flex-row gap-8 items-start group">
+                            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-slate-900 text-white flex items-center justify-center text-xl font-bold z-10 border-4 border-white shadow-lg group-hover:bg-fox-600 transition-colors duration-300">1</div>
+                            <div class="flex-1 pt-2">
+                                <h3 class="text-xl font-semibold text-slate-900 mb-2">Onboarding</h3>
+                                <p class="text-slate-600 leading-relaxed">We dive deep into your goals, niche, target audience, and brand voice. This isn't a questionnaire—it's a strategic session to align on what success looks like.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="relative flex flex-col md:flex-row gap-8 items-start group">
+                            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-white text-slate-900 border-2 border-slate-200 flex items-center justify-center text-xl font-bold z-10 group-hover:border-fox-500 group-hover:text-fox-600 transition-colors duration-300">2</div>
+                            <div class="flex-1 pt-2">
+                                <h3 class="text-xl font-semibold text-slate-900 mb-2">Content Intake</h3>
+                                <p class="text-slate-600 leading-relaxed">You send content via our secure portal, grant access to your channels, or we pull from approved sources. We organize everything in your dedicated content library.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="relative flex flex-col md:flex-row gap-8 items-start group">
+                            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-white text-slate-900 border-2 border-slate-200 flex items-center justify-center text-xl font-bold z-10 group-hover:border-fox-500 group-hover:text-fox-600 transition-colors duration-300">3</div>
+                            <div class="flex-1 pt-2">
+                                <h3 class="text-xl font-semibold text-slate-900 mb-2">Editing & Optimization</h3>
+                                <p class="text-slate-600 leading-relaxed">Our editors craft hooks that stop the scroll, captions that drive engagement, and pacing that retains attention. Every piece is formatted for your specific platforms.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="relative flex flex-col md:flex-row gap-8 items-start group">
+                            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-white text-slate-900 border-2 border-slate-200 flex items-center justify-center text-xl font-bold z-10 group-hover:border-fox-500 group-hover:text-fox-600 transition-colors duration-300">4</div>
+                            <div class="flex-1 pt-2">
+                                <h3 class="text-xl font-semibold text-slate-900 mb-2">Review & Delivery</h3>
+                                <p class="text-slate-600 leading-relaxed">Content is delivered ready-to-post via your preferred method—Google Drive, Dropbox, or direct upload. Review, approve, and publish. No back-and-forth revisions needed.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="relative flex flex-col md:flex-row gap-8 items-start group">
+                            <div class="flex-shrink-0 w-16 h-16 rounded-full bg-fox-600 text-white flex items-center justify-center text-xl font-bold z-10 border-4 border-white shadow-lg shadow-fox-200">5</div>
+                            <div class="flex-1 pt-2">
+                                <h3 class="text-xl font-semibold text-slate-900 mb-2">Ongoing Optimization</h3>
+                                <p class="text-slate-600 leading-relaxed">We analyze performance data and your feedback to continuously refine our approach. What worked last month gets better this month.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Who This Is For -->
+        <section id="audience" class="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-16">
+                    <!-- Ideal For -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
+                                <i data-feather="check" class="w-5 h-5 text-green-400"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold">Who This Is For</h2>
+                        </div>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-feather="check-circle" class="w-5 h-5 text-fox-400 mt-0.5 flex-shrink-0"></i>
+                                <span class="text-slate-300">Content creators with long-form videos who need short-form clips</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-feather="check-circle" class="w-5 h-5 text-fox-400 mt-0.5 flex-shrink-0"></i>
+                                <span class="text-slate-300">Brands sitting on hours of footage but posting inconsistently</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-feather="check-circle" class="w-5 h-5 text-fox-400 mt-0.5 flex-shrink-0"></i>
+                                <span class="text-slate-300">Agencies looking to white-label editing services</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-feather="check-circle" class="w-5 h-5 text-fox-400 mt-0.5 flex-shrink-0"></i>
+                                <span class="text-slate-300">Local businesses with expertise but no time to edit</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-feather="check-circle" class="w-5 h-5 text-fox-400 mt-0.5 flex-shrink-0"></i>
+                                <span class="text-slate-300">Anyone who values consistency over viral lottery tickets</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Not For -->
+                    <div class="md:border-l md:border-slate-800 md:pl-16">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center">
+                                <i data-feather="x" class="w-5 h-5 text-red-400"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold text-slate-400">Who It's Not For</h2>
+                        </div>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-feather="x-circle" class="w-5 h-5 text-slate-500 mt-0.5 flex-shrink-0"></i>
+                                <span class="text-slate-400">People expecting overnight viral success without effort</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-feather="x-circle" class="w-5 h-5 text-slate-500 mt-0.5 flex-shrink-0"></i>
+                                <span class="text-slate-400">Those who want to micromanage every edit and caption</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-feather="x-circle" class="w-5 h-5 text-slate-500 mt-0.5 flex-shrink-0"></i>
+                                <span class="text-slate-400">Businesses without any existing content to work with</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-feather="x-circle" class="w-5 h-5 text-slate-500 mt-0.5 flex-shrink-0"></i>
+                                <span class="text-slate-400">Anyone looking for the cheapest option rather than the best ROI</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-8 p-4 bg-slate-800/50 rounded-lg border border-slate-700">
+                            <p class="text-sm text-slate-400 italic">"We believe in building sustainable growth engines, not chasing algorithmic lottery tickets."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Why Fox Growth Agency -->
+        <section id="why-us" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Why Fox Growth Agency?</h2>
+                    <p class="text-lg text-slate-600">We're not another faceless content farm.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 mx-auto bg-fox-50 rounded-2xl flex items-center justify-center mb-4 rotate-3 hover:rotate-6 transition-transform duration-300">
+                            <i data-feather="users" class="w-8 h-8 text-fox-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-slate-900 mb-2">Small Team, Hands-On</h3>
+                        <p class="text-sm text-slate-600">You work directly with editors who understand your brand, not revolving door contractors.</p>
+                    </div>
+
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 mx-auto bg-fox-50 rounded-2xl flex items-center justify-center mb-4 -rotate-2 hover:-rotate-4 transition-transform duration-300">
+                            <i data-feather="cpu" class="w-8 h-8 text-fox-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-slate-900 mb-2">Systems Over Guesswork</h3>
+                        <p class="text-sm text-slate-600">Proven frameworks for hook writing, pacing, and platform optimization. No throwing spaghetti at walls.</p>
+                    </div>
+
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 mx-auto bg-fox-50 rounded-2xl flex items-center justify-center mb-4 rotate-1 hover:rotate-2 transition-transform duration-300">
+                            <i data-feather="trending-up" class="w-8 h-8 text-fox-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-slate-900 mb-2">Repeatable Growth</h3>
+                        <p class="text-sm text-slate-600">We focus on compound growth through consistency, not one-hit-wonders that fade fast.</p>
+                    </div>
+
+                    <div class="text-center p-6">
+                        <div class="w-16 h-16 mx-auto bg-fox-50 rounded-2xl flex items-center justify-center mb-4 -rotate-3 hover:-rotate-6 transition-transform duration-300">
+                            <i data-feather="heart" class="w-8 h-8 text-fox-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-slate-900 mb-2">Long-Term Partnerships</h3>
+                        <p class="text-sm text-slate-600">Our best work happens month 3, not day 1. We stick around to see you win.</p>
+                    </div>
+                </div>
+
+                <div class="mt-16 bg-slate-50 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1">
+                        <blockquote class="text-2xl md:text-3xl font-medium text-slate-900 leading-relaxed mb-4">
+                            "The best time to start building your content engine was 6 months ago. The second best time is today."
+                        </blockquote>
+                        <cite class="text-fox-600 font-semibold not-italic">— Fox Growth Team</cite>
+                    </div>
+                    <div class="w-32 h-32 bg-fox-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i data-feather="anchor" class="w-12 h-12 text-fox-600"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. What Happens Next -->
+        <section id="next-steps" class="py-24 px-4 sm:px-6 lg:px-8 bg-fox-50">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">What Happens Next?</h2>
+                <p class="text-lg text-slate-600 mb-12">No pressure. No obligation. Just a conversation about whether we're a fit.</p>
+
+                <div class="grid sm:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">1</div>
+                        <h3 class="font-semibold text-slate-900 mb-2">We Review</h3>
+                        <p class="text-sm text-slate-600">Take a look at your current content and business goals</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">2</div>
+                        <h3 class="font-semibold text-slate-900 mb-2">We Reply</h3>
+                        <p class="text-sm text-slate-600">Personal email within 24 hours—no automated spam</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <div class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center mx-auto mb-4 font-bold">3</div>
+                        <h3 class="font-semibold text-slate-900 mb-2">We Decide</h3>
+                        <p class="text-sm text-slate-600">If there's a fit, we move forward. If not, we point you in the right direction</p>
+                    </div>
+                </div>
+
+                <div class="inline-flex items-center gap-2 text-slate-600 bg-white px-6 py-3 rounded-full border border-slate-200">
+                    <i data-feather="shield" class="w-5 h-5 text-green-500"></i>
+                    <span class="font-medium">Zero obligation. Zero risk. Just clarity.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Email Capture Section -->
+        <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-slate-900 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+                    <!-- Background decoration -->
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-fox-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-fox-800/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-fox-600 rounded-2xl flex items-center justify-center mx-auto mb-6 rotate-3">
+                            <i data-feather="mail" class="w-8 h-8 text-white"></i>
+                        </div>
+                        
+                        <h2 class="text-3xl font-bold text-white mb-4">Want Us To Look At Your Content?</h2>
+                        <p class="text-slate-300 mb-8">Drop your email below. We'll personally review your current content and reply with specific feedback—whether we work together or not.</p>
+                        
+                        <form id="contactForm" class="space-y-4">
+                            <div class="relative">
+                                <input 
+                                    type="email" 
+                                    id="emailInput" 
+                                    placeholder="you@example.com" 
+                                    required
+                                    class="w-full px-6 py-4 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-fox-500 focus:ring-2 focus:ring-fox-500/20 transition-all"
+                                >
+                            </div>
+                            <button 
+                                type="submit" 
+                                id="submitBtn"
+                                class="w-full px-8 py-4 bg-fox-600 hover:bg-fox-500 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-fox-600/25 flex items-center justify-center gap-2"
+                            >
+                                <span>Get In Touch</span>
+                                <i data-feather="arrow-right" class="w-5 h-5"></i>
+                            </button>
+                        </form>
+
+                        <div id="formSuccess" class="hidden mt-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
+                            <div class="flex items-center gap-3 text-green-400">
+                                <i data-feather="check-circle" class="w-5 h-5"></i>
+                                <span class="font-medium">Message sent! Check your inbox for confirmation.</span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-slate-500 mt-6">We respect your privacy. No spam, ever. Unsubscribe anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <script src="components/footer.js"></script>
+    <fox-footer></fox-footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
 </html>
