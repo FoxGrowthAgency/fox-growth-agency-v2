@@ -186,9 +186,9 @@ function clearError(input) {
 // 5. Replace 'YOUR_FORMSPREE_ID' below with your actual form ID
 
 async function submitForm(email) {
-    const FORMSPREE_ID = 'YOUR_FORMSPREE_ID'; // Replace this with your actual Formspree form ID
+    const FORMSPREE_ID = 'https://formspree.io/f/xlgldzvo'; // Replace this with your actual Formspree form ID
     
-    if (FORMSPREE_ID === 'YOUR_FORMSPREE_ID') {
+    if (FORMSPREE_ID === 'https://formspree.io/f/xlgldzvo') {
         console.error('Please configure your Formspree form ID in script.js. Sign up at https://formspree.io/');
         throw new Error('Form not configured. Please set up Formspree to send emails to FoxGrowthAgency@gmail.com');
     }
