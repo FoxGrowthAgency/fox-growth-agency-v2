@@ -170,20 +170,8 @@ class FoxFooter extends HTMLElement {
                 .footer-meta a:hover {
                     color: #f97316;
                 }
-                
-                .made-with {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 0.25rem;
-                    color: #64748b;
-                }
-                
-                .heart {
-                    color: #f97316;
-                }
             </style>
-            
-            <footer>
+<footer>
                 <div class="footer-container">
                     <div class="footer-content">
                         <div class="brand-section">
@@ -231,12 +219,7 @@ class FoxFooter extends HTMLElement {
                     
                     <div class="footer-bottom">
                         <p class="copyright">&copy; ${currentYear} Fox Growth Agency. All rights reserved.</p>
-                        <div class="footer-meta">
-                            <span class="made-with">
-                                Made with <span class="heart">♥</span> for growth
-                            </span>
-                        </div>
-                    </div>
+</div>
                 </div>
             </footer>
         `;
