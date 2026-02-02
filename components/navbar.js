@@ -231,7 +231,7 @@ class FoxNavbar extends HTMLElement {
                     <div class="nav-content">
                         <a href="#hero" class="logo">
                             <div class="logo-icon">
-                                <img src="logo.png" alt="Fox Growth Agency" width="32" height="32" style="object-fit: contain;">
+                                <img src="https://huggingface.co/spaces/FoxGrowthCharlie/fox-growth-agency/resolve/main/images/FoxGrowthBrand.png" alt="Fox Growth Agency" width="32" height="32" style="object-fit: contain;">
                             </div>
                             <span>Fox Growth Agency</span>
 </a>
