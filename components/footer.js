@@ -177,9 +177,21 @@ class FoxFooter extends HTMLElement {
                         <div class="brand-section">
                             <a href="#hero" class="logo">
                                 <div class="logo-icon">
-                                    <img src="https://huggingface.co/spaces/FoxGrowthCharlie/fox-growth-agency/resolve/main/images/FoxGrowthBrand.png" alt="Fox Growth Agency" width="32" height="32" style="object-fit: contain;">
+                                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                                        <!-- Left Ear -->
+                                        <path d="M25 30 L15 5 L40 20" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <!-- Right Ear -->
+                                        <path d="M75 30 L85 5 L60 20" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <!-- Face Outline -->
+                                        <path d="M25 30 C20 45 20 60 35 75 C42 85 48 90 50 95 C52 90 58 85 65 75 C80 60 80 45 75 30" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <!-- Eyes -->
+                                        <circle cx="35" cy="50" r="4" fill="white"/>
+                                        <circle cx="65" cy="50" r="4" fill="white"/>
+                                        <!-- Nose -->
+                                        <path d="M46 78 L50 85 L54 78" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
                                 </div>
-                                <span>Fox Growth Agency</span>
+<span>Fox Growth Agency</span>
                             </a>
 <p class="brand-description">
                                 Turning long-form content into consistent short-form growth. Professional editing for creators, brands, and agencies.
