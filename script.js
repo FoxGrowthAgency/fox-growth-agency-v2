@@ -184,16 +184,10 @@ function clearError(input) {
 // 3. Verify your email address (FoxGrowthAgency@gmail.com) when Formspree sends the verification link
 // 4. Copy your form endpoint (looks like: https://formspree.io/f/xnqevjdr)
 // 5. Replace 'YOUR_FORMSPREE_ID' below with your actual form ID
-
 async function submitForm(email) {
-    const FORMSPREE_ID = 'https://formspree.io/f/xlgldzvo'; // Replace this with your actual Formspree form ID
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xlgldzvo';
     
-    if (FORMSPREE_ID === 'https://formspree.io/f/xlgldzvo') {
-        console.error('Please configure your Formspree form ID in script.js. Sign up at https://formspree.io/');
-        throw new Error('Form not configured. Please set up Formspree to send emails to FoxGrowthAgency@gmail.com');
-    }
-    
-    const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+    const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: { 
             'Content-Type': 'application/json',
@@ -207,8 +201,7 @@ async function submitForm(email) {
             source: 'Fox Growth Agency Website Contact Form'
         })
     });
-    
-    if (!response.ok) {
+if (!response.ok) {
         throw new Error('Form submission failed');
     }
     
