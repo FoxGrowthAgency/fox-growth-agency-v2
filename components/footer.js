@@ -177,23 +177,14 @@ class FoxFooter extends HTMLElement {
                         <div class="brand-section">
                             <a href="#hero" class="logo">
                                 <div class="logo-icon">
-                                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-                                        <!-- Left Ear -->
-                                        <path d="M25 30 L15 5 L40 20" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <!-- Right Ear -->
-                                        <path d="M75 30 L85 5 L60 20" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <!-- Face Outline -->
-                                        <path d="M25 30 C20 45 20 60 35 75 C42 85 48 90 50 95 C52 90 58 85 65 75 C80 60 80 45 75 30" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <!-- Eyes -->
-                                        <circle cx="35" cy="50" r="4" fill="white"/>
-                                        <circle cx="65" cy="50" r="4" fill="white"/>
-                                        <!-- Nose -->
-                                        <path d="M46 78 L50 85 L54 78" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 3c-4.5 0-8 3.5-8 8 0 5.25 8 10 8 10s8-4.75 8-10c0-4.5-3.5-8-8-8z"/>
+                                        <circle cx="12" cy="11" r="2.5" fill="currentColor"/>
                                     </svg>
                                 </div>
-<span>Fox Growth Agency</span>
+                                <span>Fox Growth Agency</span>
                             </a>
-<p class="brand-description">
+                            <p class="brand-description">
                                 Turning long-form content into consistent short-form growth. Professional editing for creators, brands, and agencies.
                             </p>
                             <div class="social-links">
