@@ -177,8 +177,8 @@ class FoxFooter extends HTMLElement {
                         <div class="brand-section">
                             <a href="#hero" class="logo">
                                 <div class="logo-icon">
-<img src="images/fox-pixel-art.png" alt="Fox Growth Agency" width="32" height="32" style="object-fit: contain; image-rendering: pixelated;">
-</div>
+                                    <img src="https://huggingface.co/spaces/FoxGrowthCharlie/fox-growth-agency/resolve/main/images/FoxGrowthBrand.png" alt="Fox Growth Agency" width="32" height="32" style="object-fit: contain;">
+                                </div>
                                 <span>Fox Growth Agency</span>
                             </a>
 <p class="brand-description">
