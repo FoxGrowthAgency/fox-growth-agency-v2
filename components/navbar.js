@@ -238,15 +238,14 @@ class FoxNavbar extends HTMLElement {
                             </div>
                             <span>Fox Growth Agency</span>
 </a>
-                        
                         <div class="desktop-links">
                             <a href="#services" class="nav-link">Services</a>
                             <a href="#workflow" class="nav-link">Process</a>
                             <a href="#why-us" class="nav-link">Why Us</a>
+                            <a href="#store" class="nav-link">Store</a>
                             <a href="#contact" class="cta-button">Get In Touch</a>
                         </div>
-                        
-                        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="3" y1="12" x2="21" y2="12"></line>
                                 <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -269,7 +268,6 @@ class FoxNavbar extends HTMLElement {
                         </svg>
                     </button>
                 </div>
-                
                 <div class="mobile-menu-links">
                     <a href="#services" class="mobile-link">
                         Services
@@ -295,9 +293,15 @@ class FoxNavbar extends HTMLElement {
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </a>
+                    <a href="#store" class="mobile-link">
+                        Store
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
                     <a href="#contact" class="mobile-cta">Get In Touch</a>
                 </div>
-            </div>
+</div>
         `;
     }
 

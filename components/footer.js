@@ -197,18 +197,17 @@ class FoxFooter extends HTMLElement {
                                 </a>
                             </div>
 </div>
-                        
                         <div class="footer-section">
                             <h4>Company</h4>
                             <ul class="footer-links">
                                 <li><a href="#services" class="footer-link">Services</a></li>
                                 <li><a href="#workflow" class="footer-link">Process</a></li>
                                 <li><a href="#why-us" class="footer-link">Why Us</a></li>
+                                <li><a href="#store" class="footer-link">Store</a></li>
                                 <li><a href="#contact" class="footer-link">Contact</a></li>
                             </ul>
                         </div>
-                        
-                        <div class="footer-section">
+<div class="footer-section">
                             <h4>Legal</h4>
                             <ul class="footer-links">
                                 <li><a href="#" class="footer-link">Privacy Policy</a></li>
