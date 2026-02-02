@@ -231,15 +231,11 @@ class FoxNavbar extends HTMLElement {
                     <div class="nav-content">
                         <a href="#hero" class="logo">
                             <div class="logo-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 3c-4.5 0-8 3.5-8 8 0 5.25 8 10 8 10s8-4.75 8-10c0-4.5-3.5-8-8-8z"/>
-                                    <circle cx="12" cy="11" r="2.5" fill="currentColor"/>
-                                </svg>
+                                <img src="logo.png" alt="Fox Growth Agency" width="32" height="32" style="object-fit: contain;">
                             </div>
                             <span>Fox Growth Agency</span>
 </a>
-                        
-                        <div class="desktop-links">
+<div class="desktop-links">
                             <a href="#services" class="nav-link">Services</a>
                             <a href="#workflow" class="nav-link">Process</a>
                             <a href="#why-us" class="nav-link">Why Us</a>
